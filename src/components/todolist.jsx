@@ -19,11 +19,16 @@ export default function Todolist(prop){
     
     
       function handledata(){
-        setdata(prev=>{
+        if(input.title==='' && input.note===''){
+            return null
+        }else{
+          setdata(prev=>{
          
             return [...prev,input];
           }
           );
+        }
+       
           
         setinput({
           title:'',
@@ -31,7 +36,7 @@ export default function Todolist(prop){
         });
         }
 
-        function handledelete(id){
+      function handledelete(id){
             setdata( data.filter((data,index)=>{
                     return index!==id;                
             }))

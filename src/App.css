@@ -21,20 +21,12 @@ body {
 
 /* card styling */
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: inline-flex;
+  flex-direction: column;
   gap: 2em;
+  width: 100%;
   padding: 0 10%;
-}
-@media screen and (max-width: 900px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media screen and (max-width: 500px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
+  margin: 5em 0;
 }
 
 .card {
@@ -42,26 +34,22 @@ body {
   font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   padding: 1% 5%;
   border-radius: 15px;
   box-shadow: 1px 1px 8px black;
   line-height: 2;
   line-break: auto;
+  width: 50%;
+  margin: 0 auto;
 }
 .card button {
-  color: #212121;
-  font-size: 4rem;
   background: none;
-  width: 20%;
   align-self: flex-end;
   border: none;
 }
-
-@media (max-width: 700px) {
-  .card {
-    width: 90%;
-  }
+.card button svg {
+  height: 1.5em;
+  width: 1.5em;
 }
 
 /* input area stying */
@@ -110,6 +98,12 @@ body {
 }
 
 @media (max-width: 700px) {
+  .inputarea {
+    width: 70%;
+  }
+  .card {
+    width: 80%;
+  }
   .inputarea button {
     height: 1em;
     width: 1em;
